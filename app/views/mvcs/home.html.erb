@@ -1,0 +1,19 @@
+<h3>List of Cat</h3>
+<% @cat.each do |c| %>
+<p>name: <%= c.name %></p>
+<% end %>
+
+<h3>List of Todos</h3>
+<%= button_to "Make new Todo", { :action => "new" }, :method => :get %>
+<% @todo.each do |t| %>
+<p>Todo:<%= t.item %><br>
+	due: <%= t.due %></p>
+<% end %>
+
+<h3>List of Users</h3>
+<% @user.each do |u| %>
+<p>username:<%= u.username %><br>
+email: <%= u.email %><br>
+age: <%=u.age%>
+</p>
+<% end %>
